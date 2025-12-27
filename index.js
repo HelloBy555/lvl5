@@ -2,7 +2,6 @@
 document.querySelector('.btn-menu').addEventListener('click', function() {
     document.querySelector('#menu').scrollIntoView({
         behavior: 'smooth'
-
     });
 });
 
@@ -25,4 +24,34 @@ document.querySelectorAll('.nav-menu a').forEach(anchor => {
 document.querySelector('.hamburger').addEventListener('click', function() {
     document.querySelector('.nav-menu').classList.toggle('active');
     this.classList.toggle('active');
+});
+
+// Scroll reveal animations using Intersection Observer (performance-optimized)
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver(function(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+            // Stop observing once revealed for better performance
+            observer.unobserve(entry.target);
+        }
+    });
+}, observerOptions);
+
+// Observe all elements with scroll-reveal class
+document.addEventListener('DOMContentLoaded', function() {
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach(el => {
+        observer.observe(el);
+    });
+    
+    // Reveal hero section immediately on load (no animation delay)
+    const heroContent = document.querySelector('#hero .hero-content');
+    if (heroContent) {
+        heroContent.classList.add('revealed');
+    }
 });
