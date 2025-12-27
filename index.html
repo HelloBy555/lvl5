@@ -31,13 +31,17 @@
         </div>
     </nav>
     <header id="hero">
+        <div class="hero-overlay"></div>
+        <img src="pictures/hero-background1.jpg" alt="Fast Food" class="hero-image">
         <div class="hero-content">
-            <h1>Fast Bites</h1>
-            <p>Fast food chaud – commande facile</p>
-            <button class="btn-menu">Voir le Menu</button>
-            <div class="scroll-arrow">↓</div>
+            <h1 class="hero-title">FAST BITES</h1>
+            <p class="hero-tagline">Commande rapide. Paiement à la livraison.</p>
+            <p class="hero-subtext">Les clients commandent directement via WhatsApp, sans application.</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn-menu">Voir le Menu</a>
+                <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander" class="btn-whatsapp">Commander sur WhatsApp</a>
+            </div>
         </div>
-        <img src="pictures/hero-background1.jpg" alt="Burger" class="hero-image">
     </header>
 
     <section id="menu">
@@ -45,62 +49,61 @@
         <div class="categories">
             <div class="category">
                 <h3>Burgers</h3>
-                <div class="items">
-                    <div class="item">
+                <div class="menu-items">
+                    <div class="menu-item">
                         <img src="pictures/classic-cheeseburger.jpg" alt="Burger Classique">
-                        <h4>Burger Classique</h4>
-                        <p>€8.50</p>
-                        <a href="https://wa.me/1234567890?text=Je commande un Burger Classique" class="btn-order">Commander</a>
+                        <div class="menu-item-content">
+                            <h4>Burger Classique</h4>
+                            <p class="menu-price">€8.50</p>
+                            <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander : Burger Classique" class="btn-commander">Commander</a>
+                        </div>
                     </div>
-                    <div class="item">
+                    <div class="menu-item">
                         <img src="pictures/cheeseburger.jpg" alt="Cheeseburger">
-                        <h4>Cheeseburger</h4>
-                        <p>€9.50</p>
-                        <a href="https://wa.me/1234567890?text=Je commande un Cheeseburger" class="btn-order">Commander</a>
-                    </div>
-                </div>
-            </div>
-            <div class="category">
-                <h3>Sandwiches</h3>
-                <div class="items">
-                    <div class="item">
-                        <img src="pictures/club-sandwich.webp" alt="Club Sandwich">
-                        <h4>Club Sandwich</h4>
-                        <p>€7.00</p>
-                        <a href="https://wa.me/1234567890?text=Je commande un Club Sandwich" class="btn-order">Commander</a>
+                        <div class="menu-item-content">
+                            <h4>Cheeseburger</h4>
+                            <p class="menu-price">€9.50</p>
+                            <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander : Cheeseburger" class="btn-commander">Commander</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="category">
                 <h3>Tacos</h3>
-                <div class="items">
-                    <div class="item">
+                <div class="menu-items">
+                    <div class="menu-item">
                         <img src="pictures/tacos.jpeg" alt="Taco Poulet">
-                        <h4>Taco Poulet</h4>
-                        <p>€6.50</p>
-                        <a href="https://wa.me/1234567890?text=Je commande un Taco Poulet" class="btn-order">Commander</a>
+                        <div class="menu-item-content">
+                            <h4>Taco Poulet</h4>
+                            <p class="menu-price">€6.50</p>
+                            <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander : Taco Poulet" class="btn-commander">Commander</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="category">
                 <h3>Menus</h3>
-                <div class="items">
-                    <div class="item">
+                <div class="menu-items">
+                    <div class="menu-item">
                         <img src="pictures/menu burger + fries.avif" alt="Menu Burger + Frites">
-                        <h4>Menu Burger + Frites</h4>
-                        <p>€12.00</p>
-                        <a href="https://wa.me/1234567890?text=Je commande un Menu Burger + Frites" class="btn-order">Commander</a>
+                        <div class="menu-item-content">
+                            <h4>Menu Burger + Frites</h4>
+                            <p class="menu-price">€12.00</p>
+                            <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander : Menu Burger + Frites" class="btn-commander">Commander</a>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="category">
                 <h3>Boissons</h3>
-                <div class="items">
-                    <div class="item">
-                        <img src="https://source.unsplash.com/random/300x200/?soda" alt="Coca-Cola">
-                        <h4>Coca-Cola</h4>
-                        <p>€2.50</p>
-                        <a href="https://wa.me/1234567890?text=Je commande un Coca-Cola" class="btn-order">Commander</a>
+                <div class="menu-items">
+                    <div class="menu-item">
+                        <img src="pictures/coca-cola.jpg" alt="Coca-Cola">
+                        <div class="menu-item-content">
+                            <h4>Coca-Cola</h4>
+                            <p class="menu-price">€2.50</p>
+                            <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander : Coca-Cola" class="btn-commander">Commander</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -108,41 +111,50 @@
     </section>
 
     <section id="how-to-order">
-        <h2>Comment Commander</h2>
-        <div class="steps">
-            <div class="step">
+        <h2>Comment commander</h2>
+        <div class="order-steps">
+            <div class="order-step">
                 <div class="step-number">1</div>
                 <h3>Choisis ton plat</h3>
-                <p>Parcours notre menu et sélectionne ce qui te fait envie.</p>
+                <p>Parcours le menu et choisis ce que tu veux.</p>
             </div>
-            <div class="step">
+            <div class="order-step">
                 <div class="step-number">2</div>
-                <h3>Envoie la commande via WhatsApp</h3>
-                <p>Clique sur "Commander" et envoie-nous ta commande.</p>
+                <h3>Commande via WhatsApp</h3>
+                <p>Un clic et ta commande arrive directement.</p>
             </div>
-            <div class="step">
+            <div class="order-step">
                 <div class="step-number">3</div>
                 <h3>Paiement à la livraison</h3>
-                <p>Paie en espèces ou par carte à la livraison.</p>
+                <p>Aucun paiement en ligne. Simple et sécurisé.</p>
             </div>
         </div>
     </section>
 
     <section id="why-order">
-        <h2>Pourquoi Commander Chez Nous</h2>
-        <ul>
-            <li>Produits frais</li>
-            <li>Préparation rapide</li>
-            <li>Livraison / à emporter</li>
-        </ul>
-        <div class="testimonials">
-            <div class="testimonial">
-                <p>"Délicieux et rapide ! Je recommande."</p>
-                <cite>- Marie L.</cite>
+        <h2>Pourquoi ce site fonctionne</h2>
+        <div class="benefits-grid">
+            <div class="benefit-card">
+                <h3>Plus de commandes sans appels</h3>
+                <p>Vos clients commandent 24/7 directement depuis leur téléphone, sans besoin de téléphoner.</p>
             </div>
-            <div class="testimonial">
-                <p>"Service impeccable, toujours à l'heure."</p>
-                <cite>- Jean D.</cite>
+            <div class="benefit-card">
+                <h3>Les clients font confiance au menu en ligne</h3>
+                <p>Un menu clair avec photos et prix transparents rassure et encourage les commandes.</p>
+            </div>
+            <div class="benefit-card">
+                <h3>Aucun abonnement, paiement simple</h3>
+                <p>Pas de frais mensuels. Le paiement se fait simplement à la livraison, sans complication.</p>
+            </div>
+        </div>
+        <div class="testimonials">
+            <div class="testimonial-card">
+                <p class="testimonial-text">"J'ai doublé mes commandes depuis que j'ai mis ce site en place. Les clients aiment commander via WhatsApp, c'est plus rapide pour eux et pour moi."</p>
+                <cite class="testimonial-author">- Thomas M., Restaurateur</cite>
+            </div>
+            <div class="testimonial-card">
+                <p class="testimonial-text">"Très simple à utiliser. Mes clients apprécient de voir le menu avec les photos avant de commander. Ça évite beaucoup de questions au téléphone."</p>
+                <cite class="testimonial-author">- Sophie L., Propriétaire</cite>
             </div>
         </div>
     </section>
@@ -161,8 +173,11 @@
     </section>
 
     <section id="cta">
-        <h2>Commande Maintenant</h2>
-        <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander" class="btn-whatsapp-large">Commander via WhatsApp</a>
+        <div class="cta-content">
+            <h2 class="cta-headline">Commande maintenant</h2>
+            <p class="cta-subtext">Un message WhatsApp et ta commande est lancée.</p>
+            <a href="https://wa.me/1234567890?text=Bonjour, je voudrais commander" class="btn-whatsapp-large">Commander via WhatsApp</a>
+        </div>
     </section>
 
     <footer>
