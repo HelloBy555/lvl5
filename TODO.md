@@ -1,4 +1,4 @@
-# TODO: Make Fast Bites Site More Professional
+# TODO: Make Saad Fastfoods Site More Professional
 
 - [x] Add fixed navigation bar to index.html
 - [x] Import Google Fonts (Roboto, Montserrat) in index.html
